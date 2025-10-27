@@ -1,9 +1,9 @@
 
-1. Configurando váriaveis de ambiente:
+**1. Configurando váriaveis de ambiente:**
 
 O arquivo ".env.exemplo" já vai com as váriaveis de ambiente padrões do SauceDemo, só é necessário alterar o nove de ".env.exemplo" para ".env".
 
-2. Como realizar a instalação:
+**2. Como realizar a instalação:**
    
 Em seu terminal, navegue até a pasta do projeto:
 
@@ -26,7 +26,7 @@ cd ..
 
 pip install -r requirements.txt
 
-3. Execução dos Testes
+**3. Execução dos Testes**
 
 Na pasta do projeto (cd qa-junior-playwright-frontend)
 

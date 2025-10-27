@@ -4,6 +4,7 @@
 O arquivo ".env.exemplo" já vai com as váriaveis de ambiente padrões do SauceDemo, só é necessário alterar o nove de ".env.exemplo" para ".env".
 
 2. Como realizar a instalação:
+   
 Em seu terminal, navegue até a pasta do projeto:
 
 cd qa-junior-playwright-frontend

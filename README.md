@@ -23,7 +23,7 @@ Siga os passos abaixo para preparar o ambiente de execução:
 1.  Clone o repositório para sua máquina.
 2.  Navegue até a pasta principal do projeto no seu terminal:
     ```bash
-    cd qa-junior-playwright-frontend
+    cd SauceDemo_2E2_Automation-main
     ```
 
 #### **Passo 3: Configurar o Ambiente Virtual**
@@ -57,7 +57,7 @@ Siga os passos abaixo para preparar o ambiente de execução:
 
 ### 2. Execução dos Testes
 
-Certifique-se de que você está na pasta do projeto (`qa-junior-playwright-frontend`) e com o ambiente virtual ativado.
+Certifique-se de que você está na pasta do projeto (`SauceDemo_2E2_Automation-main`) e com o ambiente virtual ativado.
 
 Utilize o `pytest` para executar os testes com as seguintes opções:
 

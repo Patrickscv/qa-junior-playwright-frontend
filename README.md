@@ -1,48 +1,77 @@
+# Projeto de Automação Frontend com Playwright & Python
 
-**1. Configurando váriaveis de ambiente:**
+Este repositório contém um framework de automação de testes End-to-End (E2E) desenvolvido em **Python** utilizando a biblioteca **Playwright** para o site **SauceDemo**.
 
-O arquivo ".env.exemplo" já vai com as váriaveis de ambiente padrões do SauceDemo, só é necessário alterar o nome de ".env.exemplo" para ".env".
+---
 
-**2. Como realizar a instalação:**
-   
-Em seu terminal, navegue até a pasta do projeto:
+### Pré-requisitos
 
-cd qa-junior-playwright-frontend
+Certifique-se de que você tem o **Python 3** e o **pip** instalados em sua máquina.
 
-Crie um ambiente virtual:
+### 1. Configuração do Projeto e Instalação
 
-python -m venv venv
+Siga os passos abaixo para preparar o ambiente de execução:
 
-Ative o ambiente virtual:
+#### **Passo 1: Variáveis de Ambiente**
 
-PowerShell: .\venv\Scripts\Activate.ps1
+1.  Localize o arquivo `.env.exemplo` na raiz do projeto.
+2.  **Renomeie** o arquivo para `.env`.
+    * > **Observação:** Este arquivo já contém as variáveis de ambiente padrão para o SauceDemo, mas pode ser editado para customizações futuras.
 
-No Linux e Mac: source venv/bin/activate
+#### **Passo 2: Clonar e Navegar**
 
-Instale as dependências:
+1.  Clone o repositório para sua máquina.
+2.  Navegue até a pasta principal do projeto no seu terminal:
+    ```bash
+    cd qa-junior-playwright-frontend
+    ```
 
-Retorne para a pasta principal onde está o requirements.txt
-cd ..
+#### **Passo 3: Configurar o Ambiente Virtual**
 
-pip install -r requirements.txt
+1.  Crie o ambiente virtual (venv):
+    ```bash
+    python -m venv venv
+    ```
+2.  Ative o ambiente virtual:
+    * **Windows (PowerShell):**
+        ```bash
+        .\venv\Scripts\Activate.ps1
+        ```
+    * **Linux e macOS:**
+        ```bash
+        source venv/bin/activate
+        ```
 
-Instale o Playwright:
+#### **Passo 4: Instalar Dependências**
 
-playwright install
+1.  Instale todas as bibliotecas Python listadas no `requirements.txt`:
+    ```bash
+    pip install -r requirements.txt
+    ```
+2.  Instale os *browsers* necessários para o Playwright:
+    ```bash
+    playwright install
+    ```
 
-**3. Execução dos Testes**
+---
 
-Na pasta do projeto (cd qa-junior-playwright-frontend)
+### 2. Execução dos Testes
 
-Execute o comando "pytest" para rodar sem interface gráfica:
+Certifique-se de que você está na pasta do projeto (`qa-junior-playwright-frontend`) e com o ambiente virtual ativado.
 
-pytest
+Utilize o `pytest` para executar os testes com as seguintes opções:
 
-Para ver o navegador abrir e as ações sendo executadas:
+| Comando | Descrição |
+| :--- | :--- |
+| `pytest` | Executa todos os testes em **modo *headless*** (sem interface gráfica). |
+| `pytest --headed` | Executa os testes abrindo o navegador (modo *headed*), permitindo que você **veja as ações** serem executadas. |
+| `pytest --log-cli-level=INFO` | Executa os testes e exibe os **logs** detalhados no terminal durante a execução. |
 
-pytest --headed
+---
 
-Para ver os logs de cada teste utilize o comando:
+### 3. Estrutura do Projeto
 
-pytest --log-cli-level=INFO
-
+* `tests/`: Contém os arquivos de teste (ex: `test_login.py`).
+* `pages/`: Contém o Page Object Model (POM) dos elementos da aplicação (se aplicável).
+* `requirements.txt`: Lista de dependências do Python.
+* `.env`: Variáveis de ambiente utilizadas no projeto.
